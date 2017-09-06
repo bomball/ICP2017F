@@ -1,8 +1,8 @@
-Hello! My name is Vishnu Ananthkumar.
+**Hello!**My name is Vishnu Ananthkumar.
 My passion for engineering started at early age as I found a natural curiousity to create and design new devices.
 As I got into middle school, I started learning the basics of programming and got a hands on experience
 with a 3-d modeling through a software called Autodesk Inventor.
-Throughout my high school I knew that I wanted to become an engineer but I didn't really no much more than that.
+*Throughout my high school I knew that I wanted to become an engineer but I didn't really no much more than that.*
 When my school offered us a chance to take community college courses, I jumped at the opportunity to get a hands on engineering experience.
 By taking courses like multivariable calculus, differential equations, and technical drafting, I realized I was interested in the 
 computational 3-d modeling aspect of engineering. Still I wasn't clear on exactly what that meant for me as a person. 
