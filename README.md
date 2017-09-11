@@ -19,7 +19,7 @@ This directory contains all my homework submissions, each of which is a folder p
 [**Quiz:**](https://github.com/bomball/ICP2017F/tree/master/Quiz)
 This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.
 
-[**Exams:**](https://github.com/bomball/ICP2017F/tree/master/Exams)
+[**Exams:**](https://github.com/bomball/ICP2017F/tree/master/Exam)
 This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.
 
 For questions and troubleshooting, please contact:
