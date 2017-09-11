@@ -11,3 +11,4 @@ COE 301 Intro to Computer Programming (Fall 2017)
 **Photo:** 
 [![](https://lh3.googleusercontent.com/-KiL3uoU5klo/AAAAAAAAAAI/AAAAAAAACqA/2ea-rQrstCE/s60-p-rw-no/photo.jpg)](path/to/linked/page)
 change made
+chnge mdae
