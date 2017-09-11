@@ -1,6 +1,8 @@
 To get a change from git repository to git bash:  <br />
 git pull origin "branch name" - if master branch leave alone <br />
+also make sure not to type commit more than once because once you commit its done no need to do it again<br />
 <br />
+
 To get a change from git bash to git repository:<br />
 git add .<br />
 git commit -m "Add existing file"<br />
