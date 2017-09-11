@@ -8,6 +8,8 @@ git add .<br />
 git commit -m "Add existing file"<br />
 git push origin "branch name"<br />
 
+To fix any issues with merging as described above:<br />
+git status (tells u any mistakes u made) <br />
 
 VI editor (type vi and file name)<br />
 esc key then i for insert<br />
