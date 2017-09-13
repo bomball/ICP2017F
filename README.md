@@ -8,7 +8,7 @@ COE 301 Intro to Computer Programming (Fall 2017)
 **Level:** Undergraduate - Freshman(1st year) <br />
 **ICP Class Position:** Student <br />
 **Course Webpage:** [COE 2017](http://www.shahmoradi.org/ICP2017F) <br />
-**Photo:** 
+**Photo:** <br />
 ![](https://github.com/bomball/ICP2017F/blob/master/Homework/1/Untitled.png) <br />
 **Description of the Project's Content:** <br />
 This repository contains This repository contains my homework, quizzes, and virtually every effort that I have made for the [ICP2017F](http://www.shahmoradi.org/ICP2017F/class). The structure of the project is the following: <br />
