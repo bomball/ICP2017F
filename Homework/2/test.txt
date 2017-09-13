@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+This is some example text for branch test1
+=======
+This is some example text for branch test2
+>>>>>>> 0be796ae8fe900ee36a7bf1946c62e6c92cfe71a
