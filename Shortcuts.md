@@ -16,6 +16,7 @@ git status (tells u any mistakes u made) <br />
 **Git Branching**
 *1)* type git branch nameofbranch to make a new branch
 *2)* type git checkout nameofbranch to switch to a different branch
+*3)* type git branch to view what branches you have
 
 <br />**VIM Shortcuts** <br />
 *1)* VI editor (type vi and file name)<br />
