@@ -23,3 +23,4 @@ git status (tells u any mistakes u made) <br />
 esc key then i for insert<br />
 esc key then :x or :q for save and close<br />
 esc key then :q! for close without saving <br />
+esc key then :v for visual(viewing mode) <br />
