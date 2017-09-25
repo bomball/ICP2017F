@@ -24,3 +24,7 @@ esc key then i for insert<br />
 esc key then :x or :q for save and close<br />
 esc key then :q! for close without saving <br />
 esc key then :v for visual(viewing mode) <br />
+
+<br />**MATLAB Commands** <br />
+*1)* help 'function' without the quotes gives you description of that function<br />
+*2)* int32 'word' converts each character in that word into its ascii representation and places each ascii integer value into a unique cell in a 1*(numof characters) array<br />
