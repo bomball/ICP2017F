@@ -67,7 +67,7 @@ a * d is dot product multiplication or row-wise which is the same as matrix mult
 
 6. Found on the file vishnu_fixed_the_code_full_of_errors
 
-7. [Figure 1 From Number 7]: https://www.mozilla.org
+7. [Figure 1 From Number 7](https://www.google.com)
    
      
      
