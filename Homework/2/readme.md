@@ -64,9 +64,10 @@ a * d is dot product multiplication or row-wise which is the same as matrix mult
       a =  2* eye([3,3])    This means I construct an 3 x 3 identity matrix (which has 1's on the major diagonal) and then i multiply every value in the matrix by the scalar quantity 2. <br />
       
       a = zeros(3); a(1,1) = 2; a(2,2) = 2; a(3,3) = 2     This essentially generates a 3 x 3 matrix full of zeroes and then three elements are changed from 0 to a 2 <br />
-      
+
 6. Found on the file vishnu_fixed_the_code_full_of_errors
-     
+
+7.
    
      
      
