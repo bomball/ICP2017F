@@ -67,7 +67,8 @@ a * d is dot product multiplication or row-wise which is the same as matrix mult
 
 6. Found on the file [vishnu_fixed_the_code_full_of_errors](https://github.com/bomball/ICP2017F/blob/master/Homework/2/vishnu_fixed_the_script_full_of_errors.m)
 
-7. ![](https://github.com/bomball/ICP2017F/blob/master/Homework/2/Problem%20no%207.png "From Problem No 7") 
+7. <br/> 
+![](https://github.com/bomball/ICP2017F/blob/master/Homework/2/Problem%20no%207.png "From Problem No 7") 
    
      
      
