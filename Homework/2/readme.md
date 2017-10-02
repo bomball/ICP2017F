@@ -39,7 +39,7 @@ d is either a 1 x 1 array or a 8 byte number
 4 b)
      Using the variables from part a,
       a + b  gives a 2 x 2 array adding each element from array a with that of array b
-      so that a + b = [1,0;2,1] + [-1,0;2,1] = [0,0;4,2]<br />
+      so that a + b = [1,0;2,1] + [-1,0;2,1] = [0,0;4,2] 
 
      a .* b gives a 2 x 2 array from multiplying each element in the row of the matrix a with each element in the column of matrix b,        which is essentially how matrix multiplication works. The final answer is therefore [-1,0;4,1]<br />
      
