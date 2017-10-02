@@ -9,9 +9,9 @@ Typing in ``` a+c ``` adds the variables a and c which are both of value 1 even 
 Typing in ``` d = [1 2 3 4] ``` assigns the value for the variable d as  1 x 4 array of 4 numbers each of 8 bytes so 4 * 8 = totally 32 bytes <br />
 Typing in ``` d = [1 2 3 4] ``` assigns the value for the variable d as  1 x 4 array of 4 numbers each of 8 bytes so 4 * 8 = totally 32 bytes <br />
 Typing in ```e = ['a' 'b' 'c' 'd'] ``` assigns the value for the variable e as  1 x 4 array of 4 characters each of 2 bytes so 4 * 2 = totally 8 bytes <br />
-Typing in ```f = ['abcd'] ``` assigns the value for the variable f as 1 x 4 array of 4 characters and is identical to the variable e
-Typing in ```g = {'a' 'b' 'c' 'd'} ``` assigns the value for the variable g as 1 x 4 array of values <br />
-Typing in ```h = { a b c d} ``` constructs an array h of the variables a, b, c, and d <br />
+Typing in ```f = ['abcd'] ``` assigns the value for the variable f as 1 x 4 regulararray of 4 characters and is identical to the variable e
+Typing in ```g = {'a' 'b' 'c' 'd'} ``` assigns the value for the variable g as 1 x 4 cell array of values <br />
+Typing in ```h = { a b c d} ``` constructs a cell array h of the variables a, b, c, and d <br />
 Typing in ``` whos d e f g h ``` inficates the name, number of bytes, class, and attribbutes of the variables d, e, f, g,h <br /> <br />
 
 2.
@@ -29,6 +29,41 @@ Typing in ``` (-5)^2 ``` gives you 25 because PEMDAS does parenthesis first, the
 Typing in ``` 10 - 6/2``` gives you 7 because PEMDAS, so division first then subtraction <br />
 Typing in ``` 5*4/2*3 ``` gives you 30 because PEMDAS, and since multiplication and division have the same priority level it goes from left to right <br /><br />
 
-Typing in ``` 
+4 a)
+The first example is ``` a = {1,0;2,1} ``` for the variable a which is a 2 x 2 array which has 4 numbers, but each element is individually 8 bytes so there is 8 * 4 = 32 total bytes of data<br />
+b is also the same  as a, its also a 2 x 2 array<br />
+c is a 2 x 1 array<br />
+d is either a 1 x 1 array or a 8 byte number
+<br /><br />
+
+4 b)
+     Using the variables from part a,
+      a + b  gives a 2 x 2 array adding each element from array a with that of array b
+      so that a + b = [1,0;2,1] + [-1,0;2,1] = [0,0;4,2]<br />
+
+     a .* b gives a 2 x 2 array from multiplying each element in the row of the matrix a with each element in the column of matrix b,        which is essentially how matrix multiplication works. The final answer is therefore [-1,0;4,1]<br />
+     
+     a * b gives a 2 x 2 array from multiplying both arrays elementwise or in a dot product manner, so that you would multiply the row of a with the row of b, which gives the answer [-1,0; 0,1]<br />
+     
+     a * c is elementwise, and a is a 2 x 2 while c is a 2 x 1, so the final result is a 2 x 1 array. It starts out with the 1st row of each array, and multiplies the first element of a with the first element of c and adds that to the second element of a with the first element of c which goes into the result, then it proceeds to the next row. The answer is [3;8]<br />
+     
+     a + c is adding two arrays of different sizes but it gives the final result as a 2 x 2 array. It adds the first column of a with the only column of c, which becomes the first column of the result, then it adds the second column of a with the only column of c to get the second column for the result which is [4,4; 3,3]<br />
+     
+     a + d is adding two arrays of different sizes, but because d is just a number it increments each element in the array a by the value d which is 5, so every value in the array a is added by 5 to create the resultant [6,5;7,6]<br />
+     
+     a .* d is matrix multiplication so the rows of a are multiplied by the columns of d, but since d has only element it would be simply **Scalar Multiplication** so each element in a is multiplied by d (which is 5) so the result is [5,0;10,5] <br />
+     
+     a * d is dot product multiplication or row-wise which is the same as matrix multiplication when dealing with scalars, so the result would still be  [5,0;10,5]<br /><br />
+     
+5
+     
+   
+     
+     
+
+
+
+
+
 
 
