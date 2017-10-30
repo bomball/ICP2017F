@@ -39,16 +39,10 @@ else
 end
 end
 
-4. function list = getList(directory)
-   if(isfield((directory),'name') && isfield((directory),'bytes'))
-     length = size(directory);
-     for i = 1:length
-      disp( [directory(i).name ' has ' num2str(directory(i).bytes)  ' bytes of storage']);
-     end
- 
-   else
-    list = "Please make sure that the directory has a name field and a bytes field";
-   end
+4. function s = getList(directory)
+    % turn array into a structure
+   structure = dir(directory);
+   s = sum([structure.bytes]);
 end
 
 5. 
