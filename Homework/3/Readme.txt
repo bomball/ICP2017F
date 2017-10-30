@@ -6,14 +6,12 @@
 **end** <br />
 
 2.
-`function egg = getegg()
+function egg = getegg()
 answer = (67^(2/3))*3.7*(1.038^1/3)*log(0.76*(4-100)/(70-100))/(5.4*10^(-3)*pi*pi*(4*pi/3)^2/3);
 disp(strcat('From the fridge its ', num2str(answer), ' seconds'));
-
 answer = (67^(2/3))*3.7*(1.038^1/3)*log(0.76*(20-100)/(70-100))/(5.4*10^(-3)*pi*pi*(4*pi/3)^2/3);
 disp(strcat('From the room its ', num2str(answer), ' seconds'));
-
-end<br />`
+end<br />
 
 3a).
 `function polar = getPolar(inputCartesianStruct)
