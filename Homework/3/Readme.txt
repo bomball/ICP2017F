@@ -128,7 +128,29 @@ function divisible = isdivisibleby(number,factor) %This function uses the true r
 end
 
 8.
+function general = genFunc(varargin)
+    arr = cell2mat(varargin);
+    if(isnumeric(arr(1)) == false)
+         error('Dude, these arguments are not real numbers');
+    elseif(size(arr,2)==0)
+        a = 0; b = 0; c = 0;
+    elseif(size(arr,2)==1)
+        a = arr(1); b = 0; c = 0;
+    elseif(size(arr,2)==2)
+        a = arr(1); b = arr(2); c = 0;    
+    elseif(size(arr,2)==3)
+        a = arr(1); b = arr(2); c = arr(3);
+    else
+        error('Dude, thats too many inputs');
+    end
+    general = @evalfunc;
 
+   function y = evalfunc(x)
+       y = a*x*x + b*x + c;
+      
+   end
+
+end
 
 
 
