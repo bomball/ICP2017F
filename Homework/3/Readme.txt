@@ -117,7 +117,7 @@ function prime = isPrime(number)
   
 end
 
-function divisible = isdivisibleby(number,factor) %This function uses the true recursion to detect primeness
+function divisible = isdivisibleby(number,factor) %This function uses the recursion principle
     if (factor == 1) % base case
         divisible = true;
     elseif(mod(number,factor)==0)
