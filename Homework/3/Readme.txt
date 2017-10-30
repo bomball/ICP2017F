@@ -90,5 +90,45 @@ end
 
 6. 
 
+function trianglearea = getTriangleArea(vertices)   
+    if(isfield((vertices),'x') && isfield((vertices),'y'))
+        x1 = vertices(1).x;
+        x2 = vertices(2).x;
+        x3 = vertices(3).x;
+        y1 = vertices(1).y;
+        y2 = vertices(2).y;
+        y3 = vertices(3).y;
+        %For convenience of actual function readibility
+        trianglearea = 0.5*abs(x2*y3-x3*y2-x1*y3+x3*y1+x1*y2-x2*y1);
+    else
+        trianglearea = 'This is not an appropriate input';
+    end
+end
+
+7. 
+
+function prime = isPrime(number)
+   if(number == 2)           % An easy base case
+       prime = true;
+   elseif(number<2 || mod(number,2)==0)  % Another easy base case
+       prime = false;
+   else
+       prime = isdivisibleby(number,round(number/2));  % Most useful line of code for this function
+  
+end
+
+function divisible = isdivisibleby(number,factor) %This function uses the true recursion to detect primeness
+    if (factor == 1) % base case
+        divisible = true;
+    elseif(mod(number,factor)==0)
+        divisible = false;
+    else
+        divisible = isdivisibleby(number,factor-1);
+    end
+end
+
+8.
+
+
 
 
