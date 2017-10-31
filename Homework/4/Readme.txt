@@ -99,5 +99,12 @@ else
 end
 end
 
+4. The code takes the number 2.0 and takes its square root and then squares the result which it outputs. Then it takes the number 2.0 and takes its takes its square root two times and then squares the result two times, which it outputs. This process continues until it takes the number 2.0, square roots it n times and then squares the result n times.
 
+**The result is more different from the original number as the number of iterations increase, due to a precision-roundoff issue.
 
+When the code is run, it starts by taking the square root of 2. Since the square root of 2 is irrational, its exact value has infinitely many digits, but sqrt is a double method which restricts its size to 8 bytes(16 decimal places after a one digit number) which involves rounding that value. When that value is squared, again it must round once more. This value is very close but slightly off the number 2, giving 2.000000000000004 instead.
+
+So, when it takes the square root twice and then squares it twice the result is even more deviated from the original number, giving 1.9999999999999996. After many iterations when it square roots 51 times and then squares 51 times the answer is 1.6487212645509468. But on the 52nd iteration when it square roots the number '2' 52 times it gets the number '1', so when it squares '1' 52 times it is still '1'. Essentially after square rooting too many times then answer is so close to '1' that when it gets cut off due to the size limit of the double variable type, it displays '1'.
+
+5. In this code the only way 1.0 ~= 1.0 + eps could be false is if eps = 0. But in the code, in each iteration eps is divided by 2, so eps starts out at 1 and becomes 0.5, then 0.25, then 0.125 and so on. Eventually eps is so small (1.1102e-16) that when its added to '1.0' and that value is truncated to a certain number of decimal places (because a double precision variable is only 8 bytes or 16 decimal places after a one digit number), the result is just 1.0000000000000000, and that value is equivalent to 1.0, so it breaks out of the while loop and displays the final value for the variable eps.
