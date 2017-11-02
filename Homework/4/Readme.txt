@@ -128,3 +128,14 @@ and that value is truncated to a certain number of decimal places (because a dou
 variable is only 8 bytes or 16 decimal places after a one digit number), the result is just
 1.0000000000000000, and that value is equivalent to 1.0, so it breaks out of the while loop 
 and displays the final value for the variable eps.
+
+6. 
+function largest = getLargestprime(number)
+for i=number:-1:1
+    if isprime(i)
+        largest = i;
+        break;
+    end
+end
+
+7. 
