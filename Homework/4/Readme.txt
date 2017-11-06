@@ -132,7 +132,7 @@ and displays the final value for the variable eps.
 6. 
 
 function largest = getLargestprime(number)
-for i=number:-1:1
+for i = number:-1:1
     if isprime(i)
         largest = i;
         break;
