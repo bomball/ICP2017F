@@ -130,6 +130,7 @@ variable is only 8 bytes or 16 decimal places after a one digit number), the res
 and displays the final value for the variable eps.
 
 6. 
+
 function largest = getLargestprime(number)
 for i=number:-1:1
     if isprime(i)
@@ -174,3 +175,92 @@ function fib()
 end
 
 8.
+a)
+function output = timeFib(n)
+if(~ischar(n)&&isreal(n)&&n>=0&&round(n)==n)
+output = struct;
+f = @() getFib(n);
+output(1).n = n;
+output(1).fib = getFib(n);
+output(1).runtime = timeit(f);
+else
+    error('The input argument is not a non-negative integer!');
+end
+
+
+    function fib = getFib(n_int)
+        if n_int == 0
+            fib = 0;
+        elseif n_int == 1
+            fib = 1;
+        else
+            fib = getFib(n_int-1) + getFib(n_int-2);
+        end
+    end
+end
+
+
+
+
+function output = timeFibLoop(n)
+if(~ischar(n)&&isreal(n)&&n>=0&&round(n)==n)
+output = struct;
+f = @() getFib(n);
+output(1).n = n;
+output(1).fib = getFib(n);
+output(1).runtime = timeit(f);
+else
+    error('The input argument is not a non-negative integer!');
+end
+
+    function fib = getFib(n_int)
+        firstnum = 0;
+        secondnum = 1;
+        for i = 2:n_int
+            fib = firstnum+secondnum;
+            firstnum=secondnum;
+            secondnum=fib;
+        end
+    end
+end
+
+
+
+b)
+function fibrecur = writeFibResult()
+
+    n = 1;                              %creates a cell array with all input values
+     numbers = {};
+    while(~strcmp(n,'stop'))
+        n = input('Please enter a non-negative integer or type stop: ','s');
+        if strcmp(n,'stop')
+          break;
+        else
+          n = str2double(n);
+          length = size(numbers);  
+          numbers{1,length(2)+1}=n; %#ok<*AGROW>
+        end
+    end 
+
+b = size(numbers);            % using input values to pass to the timeFib and timeFibLoop functions to calculate 
+disp(numbers);
+%disp(class());
+for i = 1:b(2)
+    fibrecur(i) = timeFib(cell2mat(numbers(i))); 
+    fibloop(i) = timeFibLoop(cell2mat(numbers(i)));
+end
+
+myarray1 = [fibrecur.n;fibrecur.fib;fibrecur.runtime];
+fileID = fopen('fibOutput.txt','w');
+fprintf(fileID,'%6s %11s %17s\n','n','fib','runtime(s)'); % some spacing/formatting and names of the columns
+fprintf(fileID,'%6d %11d %16.5d \n',myarray1); % the main  output displayed to the text
+fclose(fileID);
+
+myarray2 = [fibloop.n;fibloop.fib;fibloop.runtime];
+fileID = fopen('fibLoopOutput.txt','w');
+fprintf(fileID,'%6s %11s %17s\n','n','fib','runtime(s)');
+fprintf(fileID,'%6d %11d %16.5d \n',myarray2);
+fclose(fileID);
+
+end
+
