@@ -140,7 +140,7 @@ for i = number: -1 :1
 end
 
 7. 
-function fib()
+a) function fib()
 
     n = input('Please enter a non-negative integer or type stop: ','s');
     if strcmp(n,'stop')
@@ -173,6 +173,87 @@ function fib()
     end
 
 end
+
+
+b) function fibloop()
+
+    n = input('Please enter a non-negative integer or type stop: ','s');
+    if strcmp(n,'stop')
+        return
+    else
+        n = str2double(n);
+        if isreal(n)
+            if n>=0 && round(n)==n
+                disp(['fib(',num2str(n),') = ',num2str(getFib(n))]);
+                
+                 f = @() getFib(n);
+                disp([ char(9) 'average runtime: ' num2str(timeit(f))]);
+                
+                fibloop()
+                return
+            end
+        end
+        disp('The input argument is not a non-negative integer!');
+        fib()
+    end
+    
+    function fib = getFib(n_int)
+        firstnum = 0;
+        secondnum = 1;
+        for i = 2:n_int
+            fib = firstnum+secondnum;
+            firstnum=secondnum;
+            secondnum=fib;
+        end
+    end
+
+end
+
+c)
+
+fib()
+Please enter a non-negative integer or type stop: 10
+fib(10) = 55
+	average runtime: 2.3984e-05
+Please enter a non-negative integer or type stop: 15
+fib(15) = 610
+	average runtime: 0.0001547
+Please enter a non-negative integer or type stop: 20
+fib(20) = 6765
+	average runtime: 0.0013825
+Please enter a non-negative integer or type stop: 25
+fib(25) = 75025
+	average runtime: 0.014347
+Please enter a non-negative integer or type stop: 30
+fib(30) = 832040
+	average runtime: 0.14569
+Please enter a non-negative integer or type stop: 35
+fib(35) = 9227465
+	average runtime: 1.6679
+Please enter a non-negative integer or type stop: stop
+
+fibLoop()
+Please enter a non-negative integer or type stop: 10
+fib(10) = 55
+	average runtime: 7.7406e-06
+Please enter a non-negative integer or type stop: 15
+fib(15) = 610
+	average runtime: 6.3455e-06
+Please enter a non-negative integer or type stop: 20
+fib(20) = 6765
+	average runtime: 5.8015e-06
+Please enter a non-negative integer or type stop: 25
+fib(25) = 75025
+	average runtime: 6.0212e-06
+Please enter a non-negative integer or type stop: 30
+fib(30) = 832040
+	average runtime: 5.9943e-06
+Please enter a non-negative integer or type stop: 35
+fib(35) = 9227465
+	average runtime: 6.3273e-06
+Please enter a non-negative integer or type stop: stop
+
+The fibLoop is faster and more efficient because it doesn't use recursion. When fib runs the getFib method, it is using a recursive call to the getFib for a number one less than it, and it keeps on going until it reaches n = 2. Then it calculates fib(2) to send back to fib(3) and so on, until it finally calculates all the fib values needed to get fib(n-1) and fib(n-2) so that it can calculate fib(n). The recursive process is wasting time by going all the way back to the base case and then relaying the information back. The fibLoop is faster because it starts at the base case and increments as it goes along until it reaches n, which avoids unnecessary back and forth information relaying.
 
 8.
 a)
