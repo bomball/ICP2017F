@@ -121,6 +121,9 @@ square roots the number '2' 52 times it gets the number '1', so when it squares 
 still '1'. Essentially after square rooting too many times then answer is so close to '1' that
 when it gets cut off due to the size limit of the double variable type, it displays '1'.
 
+
+
+
 5. In this code the only way 1.0 ~= 1.0 + eps could be false is if eps = 0. 
 But in the code, in each iteration eps is divided by 2, so eps starts out at 1 and becomes 0.5,
 then 0.25, then 0.125 and so on. Eventually eps is so small (1.1102e-16) that when its added to '1.0'
@@ -128,6 +131,8 @@ and that value is truncated to a certain number of decimal places (because a dou
 variable is only 8 bytes or 16 decimal places after a one digit number), the result is just
 1.0000000000000000, and that value is equivalent to 1.0, so it breaks out of the while loop 
 and displays the final value for the variable eps.
+
+
 
 6. 
 
@@ -253,7 +258,15 @@ fib(35) = 9227465
 	average runtime: 6.3273e-06
 Please enter a non-negative integer or type stop: stop
 
-The fibLoop is faster and more efficient because it doesn't use recursion. When fib runs the getFib method, it is using a recursive call to the getFib for a number one less than it, and it keeps on going until it reaches n = 2. Then it calculates fib(2) to send back to fib(3) and so on, until it finally calculates all the fib values needed to get fib(n-1) and fib(n-2) so that it can calculate fib(n). The recursive process is wasting time by going all the way back to the base case and then relaying the information back. The fibLoop is faster because it starts at the base case and increments as it goes along until it reaches n, which avoids unnecessary back and forth information relaying.
+The fibLoop is faster and more efficient because it doesn't use recursion. 
+When fib runs the getFib method, it is using a recursive call to the getFib
+for a number one less than it, and it keeps on going until it reaches n = 2.
+Then it calculates fib(2) to send back to fib(3) and so on, until it finally
+calculates all the fib values needed to get fib(n-1) and fib(n-2) so that it 
+can calculate fib(n). The recursive process is wasting time by going all the
+way back to the base case and then relaying the information back. The fibLoop
+is faster because it starts at the base case and increments as it goes along
+until it reaches n, which avoids unnecessary back and forth information relaying.
 
 8.
 a)
