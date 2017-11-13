@@ -30,4 +30,8 @@ f = @() getFacFor(n);
 f = @() getFacVec(n);
     disp([ char(9) 'average runtime: ' num2str(timeit(f))]);
     
-3. TRIED DIDNT GET IT GAVE UP....
+3. I only got this after Vivek's advice after class.. so I understand if I don't get the extra credit for this.
+
+function factorial = getFacVec(n)
+factorial = round(exp(sum(log(1:n))));
+end
