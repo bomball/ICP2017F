@@ -22,3 +22,12 @@ end
 
 
 2.
+
+a)
+function fetchDataFromWeb()
+data = str2num(webread('http://www.shahmoradi.org/ICP2017F/homework/5-problems/triggers.txt'));
+fileID = fopen('triggers.txt','w');
+fprintf(fileID, '%5.0d\n',data);
+end
+
+b)
