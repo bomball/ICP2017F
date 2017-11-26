@@ -8,8 +8,6 @@ output = cell(33,3);
 row = 1;
 col = 1;
 for i = 1:99
- %   for i=1:3
-   %blabla
   output{row,col} =  cell2mat(mytable{triples(i),2});
   if(row == 33)
     row = 1;
