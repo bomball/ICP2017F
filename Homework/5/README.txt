@@ -83,5 +83,28 @@ data = [0,0];
     disp(num2str(success));
 end 
 
-3. 
+3. function montehall()
+rng('shuffle');
+winCounter = 0;  %turn winCounter into  winArr to plot the number of wins
+nsample = 10000;
+data = [0,0];
+    for isample = 1:nsample
+        doors = [1,2,3];
+        doorWithCar = randi(3);
+        myChoice = randi(3);
+        hostChoice = doors(doors~=doorWithCar);
+        hostChoice = hostChoice(hostChoice~=myChoice);
+        hostChoice = hostChoice(randi(length(hostChoice)));   %concise code, eliminates need for if block
+        mynewChoice = 6-hostChoice-myChoice;   % switching my choice, for my plot without switching I make this choice stay the same
+        if(mynewChoice == doorWithCar)
+           winCounter = winCounter + 1;
+           data = [data ; [isample winCounter/isample]];
+        end
+    end
+    scatter((data(:,1)), data(:,2),1);
+    disp (['The winning percentage due to switching is', num2str(winCounter/nsample)]);
+    
+    
+
+
 
