@@ -1,0 +1,3 @@
+function logTumorCells = getLogTumorCells(time, loginitTumorCells, lamda, c)
+    logTumorCells = loginitTumorCells + (lamda*(1.0 - exp(-c*time)));
+end
