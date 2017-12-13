@@ -126,5 +126,5 @@ for irow = nrow:-1:1
 end
 
 
-saveas(gcf,['Day' num2str(days) 'sliceplot.png']); % save the figure
+saveas(gcf,['Day ' num2str(days) ' sliceplot.png']); % save the figure
 end
