@@ -37,6 +37,5 @@ title('Gompertzian Fit To Rat''s Brain Tumor Growth','fontsize',12);
 xlabel('Time [ days ]','fontsize',13);
 ylabel('Tumor Cell Count','fontsize',13);
 legend('Experimental Data','location', 'northwest');
-hold off;
 
 saveas(gcf,'errorbars.png');
