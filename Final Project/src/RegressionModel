@@ -17,8 +17,7 @@ end
 ParameterInit=[10,.1,1];
 ParameterOptimal=fminsearch(@getLogTumorCellsProb, ParameterInit);
 disp(['Optimal Pamameters:' ' lamda=', num2str(ParameterOptimal(1)), ' c=', num2str(ParameterOptimal(2)), ' sigma=', num2str(ParameterOptimal(3))])
-
-figure(); 
+ 
 hold on;
 plot(timenew,exp(getLogTumorCells(timenew, loginitTumorCells, ParameterOptimal(1), ParameterOptimal(2))),'linewidth', 3 ,'color', 'red');
 hold on;
