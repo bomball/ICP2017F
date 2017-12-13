@@ -1,9 +1,0 @@
-function logTumorCellsProb = getLogTumorCellsProb(Parameter)
-global loginitTumorCells time logTumorCells ndata
-    Mean = getLogTumorCells(time, loginitTumorCells, Parameter(1), Parameter(2));
-    logProb = zeros(ndata, 1);
-    for i = 1:ndata
-        logProb(i) = log(normpdf(logTumorCells(i), Mean(i), Parameter(3)));
-    end
-    logTumorCellsProb = - sum(logProb);
-end
